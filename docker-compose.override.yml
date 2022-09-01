@@ -1,0 +1,7 @@
+# Add custom config overrides here
+# See https://docs.docker.com/compose/extends
+version: "2.1"
+services:
+    fabconnect_0:
+        container_name: dev_fabconnect_0
+        image: ffi_patch:latest

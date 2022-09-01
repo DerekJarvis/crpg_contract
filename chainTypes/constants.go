@@ -1,0 +1,39 @@
+package chainTypes
+
+const KEY_PLAYER_PROFILE = "PLRP"
+const KEY_PLAYER_VAULT = "PLRV"
+const KEY_CHARACTER = "CHR"
+const KEY_CHARACTER_LOOKUP = "CHRL"
+const KEY_PACK = "PACK"
+const KEY_TILE = "TILE"
+const KEY_DUNGEON = "DGN"
+const KEY_DUNGEON_LISTING = "DGNL"
+const KEY_DUNGEON_MATCH = "DGNM"
+
+const COST_CREATE_DUNGEON = 100
+const COST_START_DUNGEON = 100
+
+const DUNGEON_START_POWER = 100.0
+const DUNGEON_MAX_WIDTH = 100
+const DUNGEON_MAX_HEIGHT = 100
+
+const PACK_COST = 100
+const PACK_SIZE = 10
+const PLAYER_DEFAULT_GOLD = 1000
+const CHARACTER_MAX_START_POINTS int = 100
+const CHARACTER_START_POWER = 100.0
+
+// Thanks, Go, for insisting we don't need constant arrays
+func GetAllChainKeys() []string {
+	return []string{
+		KEY_PLAYER_PROFILE,
+		KEY_PLAYER_VAULT,
+		KEY_CHARACTER,
+		KEY_CHARACTER_LOOKUP,
+		KEY_PACK,
+		KEY_TILE,
+		KEY_DUNGEON,
+		KEY_DUNGEON_LISTING,
+		KEY_DUNGEON_MATCH,
+	}
+}

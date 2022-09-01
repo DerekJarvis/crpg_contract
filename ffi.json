@@ -1,0 +1,414 @@
+{
+    "namespace": "default",
+    "name": "crpg",
+    "description": "Spec interface for the crpg golang chaincode",
+    "version": "1.0",
+    "methods": [
+        {
+            "name": "WipeData",
+            "pathname": "",
+            "description": "",
+            "params": [],
+            "returns": []
+        },
+        {
+            "name": "GetPlayerProfile",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "externalAddress",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "GetPlayerVault",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "externalAddress",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "GetPacks",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "packIds",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "NewPlayerProfile",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "name",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "externalAddress",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "GetCharacterByName",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "name",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "GetCharacterIdByName",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "name",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "NewCharacter",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "name",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "externalAddress",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "BuyPacks",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "owner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "quantity",
+                    "schema": {
+                        "type": "integer"
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "OpenPacks",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "owner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "packIds",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "MakeDungeon",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "owner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "name",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "width",
+                    "schema": {
+                        "type": "integer"
+                    }
+                },
+                {
+                    "name": "height",
+                    "schema": {
+                        "type": "integer"
+                    }
+                },
+                {
+                    "name": "dungeonTiles",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "X",
+                                "Y",
+                                "TileId"
+                            ],
+                            "properties": {
+                                "X": {
+                                    "type": "integer"
+                                },
+                                "Y": {
+                                    "type": "integer"
+                                },
+                                "TileId": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "ListDungeon",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "dungeonOwner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "dungeonName",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "StartDungeon",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "dungeonOwner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "dungeonName",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "characterName",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "player",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "ScoreDungeon",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "dungeonOwner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "dungeonName",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "startTime",
+                    "schema": {
+                        "type": "integer"
+                    }
+                },
+                {
+                    "name": "moves",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "RechargeDungeon",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "dungeonOwner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "dungeonName",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        },
+        {
+            "name": "RechargeCharacter",
+            "pathname": "",
+            "description": "",
+            "params": [
+                {
+                    "name": "characterOwner",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "characterName",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "signature",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "returns": []
+        }
+    ],
+    "events": []
+}
